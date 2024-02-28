@@ -1,0 +1,31 @@
+{
+	"name": "sani-components",
+	"version": "1.0.0",
+	"description": "This is a react ui library for several components like form, button etc",
+	"main": "dist/index.js",
+	"type": "module",
+  "types": "dist/index.d.ts",
+	"scripts": {
+		"build": "npx rollup -c"
+	},
+	"keywords": [
+		"react-progress-bar",
+		"react-buttons",
+		"react-components",
+		"sani-components",
+		"react-ui-library",
+		"saniyaj"
+	],
+	"author": "Saniyaj Mallik",
+	"license": "ISC",
+	"devDependencies": {
+		"@rollup/plugin-typescript": "^11.1.6",
+		"@types/react": "^18.2.60",
+		"rollup": "^4.12.0",
+		"tslib": "^2.6.2"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	}
+}
