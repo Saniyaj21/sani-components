@@ -2,36 +2,38 @@ import * as React from "react";
 import { ReactNode } from "react";
 
 type PropsType = {
-	children: ReactNode;
-	onClick: () => void;
-	type?: "submit" | "button" | "reset";
+	height?: Number;
+	width?: Number;
 	paddingX?: Number;
 	paddingY?: Number;
 	borderRadious?: Number;
+	borderColor?: string;
 	backgroundColor?: string;
 	color?: string;
+	loadingText?: string;
 };
 
-const BorderButton = ({
-	children,
-	onClick,
-	type = "button",
+const Button = ({
+	height,
+	width,
 	paddingX = 15,
 	paddingY = 10,
 	borderRadious = 5,
-	backgroundColor = "green",
-	color = "white",
+	borderColor = "gray",
+	backgroundColor = "skyblue",
+	color = "black",
+	loadingText = "Pending",
 }: PropsType) => {
 	return (
 		<button
-			onClick={onClick}
-			type={type}
 			style={{
+				height: `${height}px`,
+				width: `${width}px`,
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "center",
 				gap: "5px",
-				border: "none",
+				border: `ipx solid ${borderColor}`,
 				fontSize: "18px",
 				fontFamily: "'Courier New', Courier, monospace",
 				padding: `${paddingY}px ${paddingX}px`,
@@ -41,9 +43,9 @@ const BorderButton = ({
 				cursor: "pointer",
 			}}
 		>
-			{children}
+			{loadingText}
 		</button>
 	);
 };
 
-export { BorderButton };
+export { Button };
