@@ -7,7 +7,7 @@ type PropsType = {
 	type?: "submit" | "button" | "reset";
 	paddingX?: Number;
 	paddingY?: Number;
-	borderRadious?: Number;
+	borderRadious?: number | string;
 	backgroundColor?: string;
 	color?: string;
 };
